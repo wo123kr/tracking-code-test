@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <title>테스트용 웹페이지</title>
   <link rel="stylesheet" href="style.css"> <!-- 스타일 연결 -->
+  <!-- ✅ Thinking Data SDK 로드 -->
+  <script src="https://cdn.jsdelivr.net/npm/thinkingdata-browser@2.0.3/thinkingdata.umd.min.js"></script>
+  <script src="https://te-receiver-naver.thinkingdata.kr/te-sdk/latest/ta.js"></script>
 </head>
 <body>
 
@@ -42,7 +45,7 @@
   </div>
 
   <!-- 스크립트 연결 -->
-  <script src="tracking.js"></script> <!-- 추적 코드 먼저 불러오기 -->
-  <script src="script.js"></script>   <!-- 일반 기능 코드 불러오기 -->
+  <script src="tracking.js"></script> <!-- ✅ 추적 코드 먼저 로드 -->
+  <script src="script.js"></script>   <!-- 일반 기능 코드 -->
 </body>
 </html>
