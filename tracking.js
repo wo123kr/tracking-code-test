@@ -144,5 +144,5 @@ button.addEventListener('click', function() {
     });
 
     console.log(`✅ 버튼 클릭 이벤트 전송: ${elementText}`);
-});
+    });
 });
