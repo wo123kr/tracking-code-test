@@ -13,36 +13,65 @@
   <script src="tracking_code.js"></script>
 </head>
 <body>
-
-  <h1>🌐 다양한 기능 테스트용 웹페이지</h1>
-
-  <div class="section">
-    <h2>1️⃣ 버튼 테스트</h2>
-    <button id="testButton">클릭해보세요!</button>
+  
+<header class="navbar">
+  <div class="navbar-container">
+      <a href="#" class="navbar-logo">ThinkingData</a>
+      <nav class="navbar-menu">
+          <a href="#home" class="navbar-link">홈</a>
+          <a href="#features" class="navbar-link">기능</a>
+          <a href="#pricing" class="navbar-link">가격</a>
+          <a href="#contact" class="navbar-link">문의하기</a>
+      </nav>
+      <button class="navbar-cta">로그인</button>
   </div>
+</header>
 
-  <div class="section">
-    <h2>2️⃣ 링크 테스트</h2>
-    <a href="https://www.google.com" target="_blank" id="testLink">Google로 이동</a>
+<section id="home" class="hero-section">
+  <div class="hero-content">
+      <h1 class="hero-title">데이터로 더 나은 결정을!</h1>
+      <p class="hero-subtitle">ThinkingData와 함께 데이터를 기반으로 비즈니스를 혁신하세요.</p>
+      <button class="hero-button">데모 신청하기</button>
   </div>
+</section>
 
-  <div class="section">
-    <h2>3️⃣ 폼 입력 테스트</h2>
-    <form id="testForm">
-      <input type="text" placeholder="이름 입력" required>
-      <button type="submit">제출하기</button>
-    </form>
+<section id="features" class="features-section">
+  <h2 class="section-title">주요 기능</h2>
+  <div class="features-grid">
+      <div class="feature-item">
+          <h3>실시간 분석</h3>
+          <p>즉각적인 데이터 인사이트를 제공합니다.</p>
+      </div>
+      <div class="feature-item">
+          <h3>유연한 대시보드</h3>
+          <p>모든 데이터를 직관적으로 시각화할 수 있습니다.</p>
+      </div>
+      <div class="feature-item">
+          <h3>강력한 보안</h3>
+          <p>데이터 보안을 최우선으로 생각합니다.</p>
+      </div>
   </div>
+</section>
 
-  <div class="section">
-    <h2>4️⃣ 모달 팝업</h2>
-    <button onclick="openModal()">모달 열기</button>
-    <div class="modal-overlay" onclick="closeModal()"></div>
-    <div class="modal">
-      <h3>모달 창입니다!</h3>
-      <button onclick="closeModal()">닫기</button>
-    </div>
+<section id="pricing" class="pricing-section">
+  <h2 class="section-title">요금제</h2>
+  <div class="pricing-cards">
+      <div class="pricing-card">
+          <h3>기본형</h3>
+          <p>₩50,000/월</p>
+          <button class="pricing-button">가입하기</button>
+      </div>
+      <div class="pricing-card">
+          <h3>프리미엄형</h3>
+          <p>₩100,000/월</p>
+          <button class="pricing-button">가입하기</button>
+      </div>
   </div>
+</section>
+
+<footer class="footer">
+  <p>&copy; 2024 ThinkingData. 모든 권리 보유.</p>
+</footer>
 
   <!-- ✅ 일반 기능 코드(script.js)는 body 끝에 위치 -->
   <script src="script.js"></script>
