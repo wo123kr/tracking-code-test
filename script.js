@@ -1,27 +1,11 @@
-// ✅ 버튼 클릭 시 알림 표시
-document.getElementById('testButton').addEventListener('click', () => {
-  alert("버튼이 클릭되었습니다!");
+console.log("✅ 스크립트 로드 완료");
+
+// Hero 버튼 클릭 시 반응
+document.querySelector(".hero-button").addEventListener("click", () => {
+    alert("데모 신청 버튼 클릭됨!");
 });
 
-// ✅ 링크 클릭 시 로그
-document.getElementById('testLink').addEventListener('click', () => {
-  console.log("링크 클릭 이벤트 발생");
+// 가격 카드 가입 버튼 반응
+document.querySelectorAll(".pricing-button").forEach(button => {
+    button.addEventListener("click", () => alert(`${button.previousElementSibling.previousElementSibling.textContent} 플랜 가입 클릭됨!`));
 });
-
-// ✅ 폼 제출 시 알림 및 초기화
-document.getElementById('testForm').addEventListener('submit', (e) => {
-  e.preventDefault();
-  alert("폼이 제출되었습니다!");
-  e.target.reset();
-});
-
-// ✅ 모달 열기 및 닫기 기능
-function openModal() {
-  document.querySelector('.modal').style.display = 'block';
-  document.querySelector('.modal-overlay').style.display = 'block';
-}
-
-function closeModal() {
-  document.querySelector('.modal').style.display = 'none';
-  document.querySelector('.modal-overlay').style.display = 'none';
-}
