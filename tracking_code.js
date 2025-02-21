@@ -128,7 +128,7 @@ console.log("✅ 공통 속성 설정 완료:", superProperties);
 ================================= */
 
 // 버튼 클릭
-document.querySelectorAll(".trackable-button").forEach(button => {
+document.querySelectorAll("button").forEach(button => {
     button.addEventListener("click", function(event) {
         te.track("Button_Click", {
             element_class: "trackable-button",
@@ -137,4 +137,3 @@ document.querySelectorAll(".trackable-button").forEach(button => {
         });
     });
 });
-
