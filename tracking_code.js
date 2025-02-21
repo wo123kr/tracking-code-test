@@ -126,12 +126,20 @@ console.log("✅ 공통 속성 설정 완료:", superProperties);
 /* ================================
    📍 [이벤트 추가 지점]
 ================================= */
-document.querySelectorAll(".trackable-button").forEach(button => {
-    button.addEventListener("click", function(event) {
-        te.track("Button_Click", {
-            element_class: "trackable-button",
-            element_text: button.innerText,
-            clicked_at: new Date().toISOString()
-        });
+// 모든 <button> 요소 선택
+document.querySelectorAll("button").forEach(button => {
+  button.addEventListener("click", function(event) {
+    te.track("Button_Click", {
+      element_id: button.id || "no-id",               // 버튼 ID (없으면 "no-id")
+      element_text: button.innerText.trim(),         // 버튼 텍스트
+      clicked_at: new Date().toISOString(),          // 클릭 시각 (ISO 형식)
+      click_position: {
+        x: event.clientX,                             // 클릭 시 X 좌표
+        y: event.clientY                              // 클릭 시 Y 좌표
+      }
     });
+
+    console.log(`✅ 클릭 이벤트 전송됨: ${button.id || "no-id"}`);
+  });
+});
 });
