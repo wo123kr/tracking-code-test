@@ -1,79 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <title>테스트용 웹페이지</title>
-  <link rel="stylesheet" href="style.css"> <!-- 스타일 연결 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HostCenter 유사 페이지</title>
+    <link rel="stylesheet" href="style.css">
 
-  <!-- ✅ Thinking Data SDK 로드 (최우선) -->
-  <script src="https://cdn.jsdelivr.net/npm/thinkingdata-browser@2.0.3/thinkingdata.umd.min.js"></script>
-  <script src="https://te-receiver-naver.thinkingdata.kr/te-sdk/latest/ta.js"></script>
+    <!-- ✅ Thinking Data SDK 로드 (최우선) -->
+    <script src="https://cdn.jsdelivr.net/npm/thinkingdata-browser@2.0.3/thinkingdata.umd.min.js"></script>
+    <script src="https://te-receiver-naver.thinkingdata.kr/te-sdk/latest/ta.js"></script>
 
-  <!-- ✅ 추적 코드 (tracking.js) 먼저 로드 -->
-  <script src="tracking_code.js"></script>
+    <!-- ✅ 추적 코드 (tracking_code.js) 먼저 로드 -->
+    <script src="tracking_code.js"></script>
 </head>
 <body>
-  
-<header class="navbar">
-  <div class="navbar-container">
-      <a href="#" class="navbar-logo">ThinkingData</a>
-      <nav class="navbar-menu">
-          <a href="#home" class="navbar-link">홈</a>
-          <a href="#features" class="navbar-link">기능</a>
-          <a href="#pricing" class="navbar-link">가격</a>
-          <a href="#contact" class="navbar-link">문의하기</a>
-      </nav>
-      <button class="navbar-cta">로그인</button>
-  </div>
+
+<header class="header">
+    <div class="header-container">
+        <a href="#" class="logo">HostCenter</a>
+        <nav class="nav-menu">
+            <a href="#services" class="nav-link">서비스</a>
+            <a href="#pricing" class="nav-link">가격</a>
+            <a href="#support" class="nav-link">고객센터</a>
+        </nav>
+        <button class="nav-cta">로그인</button>
+    </div>
 </header>
 
-<section id="home" class="hero-section">
-  <div class="hero-content">
-      <h1 class="hero-title">데이터로 더 나은 결정을!</h1>
-      <p class="hero-subtitle">ThinkingData와 함께 데이터를 기반으로 비즈니스를 혁신하세요.</p>
-      <button class="hero-button">데모 신청하기</button>
-  </div>
+<section class="hero">
+    <div class="hero-content">
+        <h1>빠르고 안정적인 호스팅 서비스</h1>
+        <p>비즈니스를 위한 최적의 솔루션을 제공합니다.</p>
+        <button class="hero-btn">서비스 신청하기</button>
+    </div>
 </section>
 
-<section id="features" class="features-section">
-  <h2 class="section-title">주요 기능</h2>
-  <div class="features-grid">
-      <div class="feature-item">
-          <h3>실시간 분석</h3>
-          <p>즉각적인 데이터 인사이트를 제공합니다.</p>
-      </div>
-      <div class="feature-item">
-          <h3>유연한 대시보드</h3>
-          <p>모든 데이터를 직관적으로 시각화할 수 있습니다.</p>
-      </div>
-      <div class="feature-item">
-          <h3>강력한 보안</h3>
-          <p>데이터 보안을 최우선으로 생각합니다.</p>
-      </div>
-  </div>
+<section id="services" class="services">
+    <h2 class="section-title">주요 서비스</h2>
+    <div class="service-list">
+        <div class="service-item">
+            <h3>웹 호스팅</h3>
+            <button class="service-btn">자세히 보기</button>
+        </div>
+        <div class="service-item">
+            <h3>클라우드 서버</h3>
+            <button class="service-btn">자세히 보기</button>
+        </div>
+        <div class="service-item">
+            <h3>도메인 등록</h3>
+            <button class="service-btn">자세히 보기</button>
+        </div>
+    </div>
 </section>
 
-<section id="pricing" class="pricing-section">
-  <h2 class="section-title">요금제</h2>
-  <div class="pricing-cards">
-      <div class="pricing-card">
-          <h3>기본형</h3>
-          <p>₩50,000/월</p>
-          <button class="pricing-button">가입하기</button>
-      </div>
-      <div class="pricing-card">
-          <h3>프리미엄형</h3>
-          <p>₩100,000/월</p>
-          <button class="pricing-button">가입하기</button>
-      </div>
-  </div>
+<section id="pricing" class="pricing">
+    <h2 class="section-title">요금제</h2>
+    <div class="pricing-cards">
+        <div class="pricing-card">
+            <h3>기본형</h3>
+            <p>₩5,000/월</p>
+            <button class="pricing-btn">신청하기</button>
+        </div>
+        <div class="pricing-card">
+            <h3>프리미엄형</h3>
+            <p>₩15,000/월</p>
+            <button class="pricing-btn">신청하기</button>
+        </div>
+    </div>
+</section>
+
+<section id="support" class="support">
+    <h2 class="section-title">고객센터</h2>
+    <button class="support-btn">문의하기</button>
 </section>
 
 <footer class="footer">
-  <p>&copy; 2024 ThinkingData. 모든 권리 보유.</p>
+    <p>&copy; 2024 HostCenter. 모든 권리 보유.</p>
 </footer>
 
-  <!-- ✅ 일반 기능 코드(script.js)는 body 끝에 위치 -->
-  <script src="script.js"></script>
+<!-- ✅ 일반 스크립트 로드 (마지막에 로드) -->
+<script src="scripts.js"></script>
 </body>
 </html>
