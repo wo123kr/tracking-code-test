@@ -15,7 +15,7 @@ console.log("✅ ThinkingData SDK initialized:", config);
 
 
 /* ================================
-   📍 ✅ 공통 속성 설정 (모든 이벤트에 자동 추가)
+   📍 ✅ 공통 속성 설정 (모든 이벤트에 자동 추ㅁ가)
    - 목적 : 이벤트마다 반복적으로 입력할 필요 없이 공통 속성을 자동 추가
    - 수집 항목 : 페이지 정보, 디바이스 정보, 브라우저 정보, 방문자 정보 등
 ================================= */
@@ -126,23 +126,24 @@ console.log("✅ 공통 속성 설정 완료:", superProperties);
 /* ================================
    📍 [이벤트 추가 지점]
 ================================= */
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('button').forEach(button => {
+        button.addEventListener('click', function() {
+            const elementId = this.id || 'none';                                // 버튼 ID 추출
+            const elementClass = this.className || 'none';                      // 버튼 클래스명 추출
+            const elementText = this.innerText.trim().substring(0, 100);        // 버튼 텍스트 (최대 100자)
+            const pageUrl = window.location.href;                               // 현재 페이지 URL
+    
+            // ✅ 버튼 클릭 이벤트 전송
+            te.track('button_click', {
+                element_id: elementId,
+                element_class: elementClass,
+                element_text: elementText,
+                page_url: pageUrl,
+                timestamp: new Date().toISOString()
+            });
 
-document.querySelectorAll('button').forEach(button => {
-button.addEventListener('click', function() {
-    const elementId = this.id || 'none';                             // 버튼 ID 추출
-    const elementClass = this.className || 'none';                   // 버튼 클래스명 추출
-    const elementText = this.innerText.trim().substring(0, 100);     // 버튼 텍스트 (최대 100자)
-    const pageUrl = window.location.href;                            // 현재 페이지 URL
-
-    // ✅ 버튼 클릭 이벤트 전송
-    te.track('button_click', {
-        element_id: elementId,
-        element_class: elementClass,
-        element_text: elementText,
-        page_url: pageUrl,
-        timestamp: new Date().toISOString()
-    });
-
-    console.log(`✅ 버튼 클릭 이벤트 전송: ${elementText}`);
+            console.log(`✅ 버튼 클릭 이벤트 전송: ${elementText}`);
+        });
     });
 });
