@@ -128,23 +128,11 @@
        📍 [이벤트 추가 지점]
     ================================= */
     
-    document.querySelectorAll('button').forEach(button => {
-    button.addEventListener('click', function() {
-        const elementId = this.id || 'none';                             // 버튼 ID 추출
-        const elementClass = this.className || 'none';                   // 버튼 클래스명 추출
-        const elementText = this.innerText.trim().substring(0, 100);     // 버튼 텍스트 (최대 100자)
-        const pageUrl = window.location.href;                            // 현재 페이지 URL
-
-        // ✅ 버튼 클릭 이벤트 전송
-        te.track('button_click', {
-            element_id: elementId,
-            element_class: elementClass,
-            element_text: elementText,
-            page_url: pageUrl,
-            timestamp: new Date().toISOString()
-        });
-
-        console.log(`✅ 버튼 클릭 이벤트 전송: ${elementText}`);
-    });
+document.addEventListener('DOMContentLoaded', () => {
+  // DOM이 완전히 로드된 후 이벤트 연결
+  document.getElementById('testButton').addEventListener('click', () => {
+    console.log("버튼 클릭 추적!");
+    te.track('button_click', { element_text: '클릭해보세요!' });
+  });
 });
 </script>
