@@ -142,4 +142,3 @@ document.querySelectorAll("button").forEach(button => {
     console.log(`✅ 클릭 이벤트 전송됨: ${button.id || "no-id"}`);
   });
 });
-});
